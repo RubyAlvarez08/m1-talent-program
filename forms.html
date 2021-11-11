@@ -7,18 +7,32 @@
     <title>Structure forms</title>
 </head>
 <body>
-    <form action="/practice.html" method="post">
+    <form action="A DONDE SE ENVIA EL FORM" method="get" autocomplete>
         <h1>Davies Burguers</h1>
-        <!--Text Input-->
         <p>the best burgers to share with friends and family</p>
-        <label for="username">username</label>
-        <input type="text" name="username" value="Davie">
+        <!--Text Input-->
+        <div>
+            <label for="username">username</label>
+            <input type="text" name="username" value="Davie" autofocus minlength="2" maxlength="6" required>
+        </div>
+       
         <!--Password Input-->
-        <label for="user-pw">Password</label>
-        <input type="password" name="user-pw" id=user-pw>
+        <div>
+            <label for="user-pw">Password</label>
+            <input type="password" name="user-pw" id=user-pw  autocomplete="off" required>
+        </div>
+        <hr>
         <!--Number Input-->
-        <label for="amount">How many patties would you like?</label>
-        <input type="number" name="amount" id="amount" step="1">
+        <div>
+            <label for="amount">How many patties would you like?</label>
+            <input type="number" name="amount" id="amount" step="1">
+        </div>
+        <hr>
+        <!--Date Input-->
+        <div>
+            <label for="date">Date</label>
+            <input type="date">
+        </div>
         <hr>
 			<!--Range Input-->	
         <section class="cooked">
@@ -33,23 +47,34 @@
         <section class="toppings">
             <span>What toppings would you like?</span>
             <br>
-            <label for="pineapple">pineapple</label>
-            <input type="checkbox" id="pineapple" name="topping" value="pineapple">
-            <label for="lettuce">Lettuce</label>
-            <input type="checkbox" id="lettuce" name="tooping" value="lettuce">
-            <label for="tomato">Tomato</label>
-            <input type="checkbox" id="tomato" name="topping" value="tomato">
+            <div>
+                <label for="pineapple">pineapple</label>
+                <input type="checkbox" id="pineapple" name="topping" value="pineapple">
+            </div>
+            <div>
+                <label for="lettuce">Lettuce</label>
+                <input type="checkbox" id="lettuce" name="tooping" value="lettuce">
+            </div>
+            <div>
+                <label for="tomato">Tomato</label>
+                <input type="checkbox" id="tomato" name="topping" value="tomato">
+            </div>
+            
+            
         </section>
         <hr>
           <!--Radio Button Input-->
         <section class="cheesy">
           <span>Would you like to add cheese?</span>
           <br>
-          <input type="radio" id="yes" name="cheese" value="yes">
-          <label for="yes">Yes</label>
-	       
-          <input type="radio" id="no" name="cheese" value="no">
-          <label for="no">No</label>
+          <div>
+            <input type="radio" id="yes" name="cheese" value="yes">
+            <label for="yes">Yes</label>
+          </div>
+          <div>
+            <input type="radio" id="no" name="cheese" value="no">
+            <label for="no">No</label>
+          </div>
         </section>
         <hr>
         <!--Dropdown list-->
@@ -64,7 +89,8 @@
         <hr>
         <!--Datalist Input-->
         <section class="sauce-selection">
-			      <label for="sauce">What type of sauce would you like?</label>
+
+			<label for="sauce">What type of sauce would you like?</label>
             <input type="text" list="sauces" id="sauce" name="sauce">
             <datalist id="sauces">
               <option value="ketchup"></option>
