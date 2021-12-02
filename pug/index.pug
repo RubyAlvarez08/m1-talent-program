@@ -6,7 +6,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
     body 
-        h1#sintaxisId Welcome to pug!
+        h1#sintaxisId Welcome to pug👻!
         p.sintaxisClass.
          This is a paragraph 
          and this a new line
@@ -17,3 +17,15 @@ html(lang="en")
             li Tis is item #3
         .display-box
         .myOnlyDiv 
+        input(type="password" data-js=`${5>2 ? "0k" : "NOT OK"}` name="input")
+
+        - const myClasses = ["class1", "class2", "class3"]
+        div(class=myClasses)
+
+        - const myStyles = {"color" : "blue", "background-color": "orange"}
+        div(style=myStyles)
+
+        - const myAttributes = {"src": "myphoto.png", "alt": "This is my photo"}
+        img&attributes(myAttributes)
+
+        input(type="text" disabled=true)
