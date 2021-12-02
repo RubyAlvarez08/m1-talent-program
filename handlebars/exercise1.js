@@ -1,6 +1,6 @@
 
 
-const myInfo = "<p> My name is {{name}} and I live at {{street}} in {{city}}, {{state}}</p>";
+const myInfo = "<b> My name is {{name}} and I live at {{street}} in {{city}}, {{state}}</b>";
 
 const template = Handlebars.compile(myInfo);
 
@@ -10,4 +10,5 @@ const data = template({
                         city: "Santa Cecilia",
                         state: "Mexico"
                     });
+                    console.log(data);
 document.getElementById("myData").innerHTML += data;
