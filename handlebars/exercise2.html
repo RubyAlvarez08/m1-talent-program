@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Each helper Handlebars</title>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
@@ -15,7 +16,20 @@
         <span>Ejemplo tomado de</span>
         <a href="https://www.freecodecamp.org/news/take-10-minutes-to-get-started-with-handlebars-298632ed82ab/">FreeCodeCamp</a>
     </div>
-    
+    <script id="quotes-template" type="text/x-handlebars-template">                  
+        <div class="row">                    
+            {{#each this}}                      
+            <div class="col-12 col-sm-6 p-3">                          
+                <div class="card">                              
+                    <h4 class="card-header">{{name}}</h4>                              
+                    <div class="card-body"> {{quote}}</div>                          
+                </div>                     
+            </div>                    
+            {{/each}}                
+        </div>            
+    </script>  
+  </div></div>
+ 
 </body>
 <script src="exercise2.js" type="module"></script>
 </html>

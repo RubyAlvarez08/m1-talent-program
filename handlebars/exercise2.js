@@ -19,20 +19,26 @@ const quotes = [
         quote: "I’m a big fan of doing what you are really bad at. A lot."
     } 
 ];
+                  
+//*************************** With Javascript *************************** */
 
-
-for (let i = 0; i < quotes.length; i++) { 
+/* for (let i = 0; i < quotes.length; i++) { 
     let name = quotes[i].name, quote = quotes[i].quote;
 
     quoteMarkup += `<div class="col-12 col-sm-6"> 
                         <h5> ${name} </h5>  
                         <p> ${quote} </p> 
                     </div>`;
-};
+}; 
+document.getElementById('quotes').innerHTML = quoteMarkup
+*/
 
-let template = Handlebars.compile(quoteMarkup);
+//*****************  With Handlebars **********/
+let src = document.getElementById('quotes-template').innerHTML;
+let template = Handlebars.compile(src);
+let html = template(quotes);
 
-let data = template(quotes);
+content.innerHTML = html;
 
-content.innerHTML = data;
+
 
