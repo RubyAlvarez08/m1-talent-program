@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(name="description" content="Exercise jr talent program pug and accessibility")
+		title Jr-Talent-Program
+   
+	body 
+		-const heading = ["Make Huge Moves", "Powered by the M1 talent program at "]
+		-const currency = ["USD", "COP"]
+		-const languaje = ["ES", "EN"]
+		-const regionalMenu = ["languaje", "currency"]	
+		-const mainMenu = ["Program", "Tech", "Talent"]	
+		-const linkHuge = "https://www.hugeinc.com/"
+		-const images= [{ name: "Program", image: './assets/program.jpg'},{ name: "Talent", image: './assets/talent.jpg'},{ name: "Tech", image: './assets/tech.jpg'}]
+
+		header
+			include topBar
+			.main-menu
+					a(href=linkHuge) 
+						img(src='./assets/Huge_logo_1.jpeg' alt="Huge logo. The link will take you to the official website of the company.")
+					nav
+						ul: each option in mainMenu
+							li: a(href= option)= option
+		main
+			.banner(role="banner"): each option in images
+				.banner__wrapper
+							p= option.name 
+							img(src=option.image alt="")
+			include form		 
+		footer 
+			h2(tabindex="0")= heading[1]
+				a(href=linkHuge)
+					strong Huge
