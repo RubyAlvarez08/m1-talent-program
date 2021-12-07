@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exercise jr talent program pug and accessibility">
+    <title>Jr-Talent-Program</title>
+  </head>
+  <body> 
+    <header>
+      <div class="top-bar">
+        <h1>Make Huge Moves</h1>
+        <ul>
+          <li>Regional Menu 
+            <ul>
+              <li>Languaje 
+                <select>
+                  <option aria-checked="true">ES</option>
+                  <option aria-checked="false">EN</option>
+                </select>
+              </li>
+              <li>Currency
+                <select>
+                  <option aria-checked="true">USD</option>
+                  <option aria-checked="false">COP</option>
+                </select>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="main-menu"><a href="https://www.hugeinc.com/"> <img src="./assets/Huge_logo_1.jpeg" alt="Huge logo. The link will take you to the official website of the company."></a>
+        <nav>
+          <ul>
+            <li><a href="Program">Program</a></li>
+            <li><a href="Tech">Tech</a></li>
+            <li><a href="Talent">Talent</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="banner" role="banner">
+        <div class="banner__wrapper">
+          <p>Program</p><img src="./assets/program.jpg" alt="">
+        </div>
+        <div class="banner__wrapper">
+          <p>Talent</p><img src="./assets/talent.jpg" alt="">
+        </div>
+        <div class="banner__wrapper">
+          <p>Tech</p><img src="./assets/tech.jpg" alt="">
+        </div>
+      </div>
+      <form class="contact-form">
+        <div class="contact-form__items"> 
+          <label id="username">Names </label>
+          <input type="text" name="username" placeholder="enter your name">
+        </div>
+        <div class="contact-form__items"> 
+          <label id="lastname">LastName</label>
+          <input type="text" name="lastname" placeholder="enter your lastname">
+        </div>
+        <div class="contact-form__items"> 
+          <label id="email">Email</label>
+          <input type="email" name="email" placeholder="enter your email">
+        </div>
+        <div class="contact-form__items"> 
+          <label id="message"></label>
+          <textarea name="message" cols="20" rows="4"> </textarea>
+        </div>
+        <div class="submission">
+          <button type="submit" value="Submit">Submit</button>
+        </div>
+      </form>
+    </main>
+    <footer> 
+      <h2 tabindex="0">Powered by the M1 talent program at <a href="https://www.hugeinc.com/"><strong>Huge</strong></a></h2>
+    </footer>
+  </body>
+</html>
