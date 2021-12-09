@@ -10,25 +10,18 @@
   <body> 
     <header>
       <div class="top-bar">
-        <h1>Make Huge Moves</h1>
-        <ul>
-          <li>Regional Menu 
-            <ul>
-              <li>Languaje 
-                <select>
-                  <option aria-checked="true">ES</option>
-                  <option aria-checked="false">EN</option>
-                </select>
-              </li>
-              <li>Currency
-                <select>
-                  <option aria-checked="true">USD</option>
-                  <option aria-checked="false">COP</option>
-                </select>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <p>Make Huge Moves
+          <label for="languaje">Languaje </label>
+          <select name="languaje" id="languaje">
+            <option aria-checked="true">ES</option>
+            <option aria-checked="false">EN</option>
+          </select>
+          <label for="currency">Currency</label>
+          <select name="currency" id="currency">
+            <option aria-checked="true">USD</option>
+            <option aria-checked="false">COP</option>
+          </select>
+        </p>
       </div>
       <div class="main-menu"><a href="https://www.hugeinc.com/"> <img src="./assets/Huge_logo_1.jpeg" alt="Huge logo. The link will take you to the official website of the company."></a>
         <nav>
@@ -66,7 +59,7 @@
           <input type="email" name="email" placeholder="enter your email">
         </div>
         <div class="contact-form__items"> 
-          <label id="message"></label>
+          <label id="message">Message</label>
           <textarea name="message" cols="20" rows="4"> </textarea>
         </div>
         <div class="submission">
