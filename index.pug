@@ -11,26 +11,27 @@ html(lang="en")
 		-const heading = ["Make Huge Moves", "Powered by the M1 talent program at "]
 		-const currency = ["USD", "COP"]
 		-const languaje = ["ES", "EN"]
-		-const regionalMenu = ["languaje", "currency"]	
+		-const regionalMenu = ["languaje","currency"]	
 		-const mainMenu = ["Program", "Tech", "Talent"]	
 		-const linkHuge = "https://www.hugeinc.com/"
 		-const images= [{ name: "Program", image: './assets/program.jpg'},{ name: "Talent", image: './assets/talent.jpg'},{ name: "Tech", image: './assets/tech.jpg'}]
 
-		header
-			include topBar
+		header.topbar
+			h1= heading[0]
 			.main-menu
-					a(href=linkHuge) 
-						img(src='./assets/Huge_logo_1.jpeg' alt="Huge logo. The link will take you to the official website of the company.")
+				figure
+					a(class="main-menu__link" href=linkHuge) 
+						img( class="main-menu__logo" src='./assets/Huge_logo_1.jpeg' alt="Huge logo. The link will take you to the official website of the company.")
 					nav
 						ul: each option in mainMenu
 							li: a(href= option)= option
+			include regionalMenu
 		main
-			.banner(role="banner"): each option in images
-				.banner__wrapper
+			article.banner(role="banner"): each option in images
 							p= option.name 
 							img(src=option.image alt="")
 			include form		 
-		footer 
-			h2(tabindex="0")= heading[1]
+		footer.footer 
+			h2= heading[1]
 				a(href=linkHuge)
 					strong Huge

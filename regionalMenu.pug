@@ -1,0 +1,9 @@
+.regional-menu
+	label(for="languaje") Languaje 
+		select(name="languaje" id="languaje")
+			option(aria-checked="true" value="spanish")= languaje[0]
+			option(aria-checked="false" value="english")= languaje[1]
+	label(for="currency") Currency
+		select(name="currency" id="currency")
+			option(aria-checked="true")= currency[0]
+			option(aria-checked="false")= currency[1]
