@@ -27,9 +27,10 @@ html(lang="en")
 							li: a(href= option)= option
 			include regionalMenu
 		main
-			article.banner(role="banner"): each option in images
-							p= option.name 
-							img(src=option.image alt="")
+			article.banner(role="banner")
+				figure: each option in images
+					img(src=option.image alt="")
+					figcaption=  option.name
 			include form		 
 		footer.footer 
 			h2= heading[1]
