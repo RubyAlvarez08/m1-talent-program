@@ -1,0 +1,28 @@
+.container{
+    min-height: 100vh;
+    display: grid;
+    gap: 3px;
+    grid-template-rows: auto auto auto 1fr;
+    grid-template-areas: 
+        "header"
+				"navbar"
+        "main"
+        "form"
+        "footer";
+    
+}
+.header{
+    grid-area: header;
+}
+.navbar{
+	grid-area: navbar;
+}
+.main{
+    grid-area: main;
+}
+.contactForm{
+    grid-area: form;
+}
+.footer{
+    grid-area: footer;
+}
