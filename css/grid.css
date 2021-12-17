@@ -1,28 +1,24 @@
 .container{
     min-height: 100vh;
-    display: grid;
-    gap: 3px;
-    grid-template-rows: auto auto auto 1fr;
-    grid-template-areas: 
-        "header"
-				"navbar"
-        "main"
-        "form"
-        "footer";
-    
-}
+		display: grid;
+		gap: 3px;
+		grid-template-columns: auto auto auto auto;
+		grid-template-rows: auto;
+		grid-template-areas: 
+			"header header header header"
+			"navbar navbar navbar navbar"
+			"main main main main"
+			"footer footer footer footer";
+	}
 .header{
-    grid-area: header;
+	grid-area: header;
 }
 .navbar{
 	grid-area: navbar;
 }
 .main{
-    grid-area: main;
-}
-.contactForm{
-    grid-area: form;
+	grid-area: main;
 }
 .footer{
-    grid-area: footer;
+	grid-area: footer;
 }

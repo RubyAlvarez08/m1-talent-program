@@ -1,30 +1,113 @@
-.container > * {
-	margin: 0;
-  box-sizing: border-box;
-	padding: 20px;
-	border: 1px solid;
+*{
+    box-sizing: border-box;
+}
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: #C4BEBD;
+}
+.flex-container > * {
+    padding: 0;
+    margin: 5px;
+    flex: 100%;
+}
+.header{
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+}
+.header__figure-container{
+    margin: 0;
+    order: 2;
+}
+.header__logo{
+    border-radius: 50%;
+    border: 1px solid turquoise;
+    width: 100px;
+    height: 100px;
+}
+.header__title{
+    order: 3;
+    margin: 2px;
+    align-self: center;
+}
+.regional-menu{
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    order: 1;
+}
+.navbar{
+    background-color: moccasin;
+
 }
 ul{
     list-style-type: none;
-		margin: 0;
-		padding: 0;
+	margin: 0;
+	padding: 0;
+    text-align: center;
+}
+.navbar li{
+    height: 20px;
 }
 a{
 	color: inherit;
 	text-decoration: none;
 }
-.header__logo{
-    width: 100px;
-    height: 100px;
+.main{
+    background-color: lightcoral;
+    height: 350px;
+}
+.banner{
+    display: flex;
+}
+.banner_img{
+    max-width: 50%;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    height: 30vh;
+}
+.footer{
+    background-color: khaki;
+    text-align: center;
+    height: 80px;
 }
 
-@media screen and (min-width: 768px) {
-    h1 {
-        font-size: 48px;
-     }
+@media only screen and (min-width: 768px) {
+    .regional-menu{
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 15px;
+        margin: 5px; 
+    }
+    .main{
+        display:flex;
+        flex: 50%;
+    }
+    .form{
+        flex:50%;
+    }
 }
-@media screen and (min-width: 1024px ){
-    h1 {
-        font-size: 76px;
-     }
+@media only screen and (min-width: 1024px ){
+    .header{
+        height: 12vh;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 10px;
+    }
+    .header__figure-container{
+        order: 1
+    }
+    .header__title{
+        order: 2;
+        font-size: 50px;
+    }
+    .regional-menu{
+        order: 3;
+    }
 }

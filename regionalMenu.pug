@@ -1,9 +1,9 @@
-.regionalMenu(role="navigation" aria-label="Regional menu")
-	label(class="regionalMenu__options" for="languaje") Languaje 
-		select(class="regionalMenu__select" name="languaje" id="languaje")
+.regional-menu(role="navigation" aria-label="Regional menu")
+	label(class="regional-menu__options" for="languaje") Languaje 
+		select(class="regional-menu__select" name="languaje" id="languaje")
 			option(aria-checked="true" value="spanish")= languaje[0]
 			option(aria-checked="false" value="english")= languaje[1]
-	label(class="regionalMenu__options" for="currency") Currency
-		select(class="regionalMenu__select" name="currency" id="currency")
+	label(class="regional-menu__options" for="currency") Currency
+		select(class="regional-menu__select" name="currency" id="currency")
 			option(aria-checked="true")= currency[0]
 			option(aria-checked="false")= currency[1]

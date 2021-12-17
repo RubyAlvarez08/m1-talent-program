@@ -7,9 +7,9 @@ html(lang="en")
 		meta(name="description" content="Exercise jr talent program pug and accessibility")
 		title Jr-Talent-Program
 		link(rel="stylesheet" href="./css/styles.css")
-		link(rel="stylesheet" href="./css/grid.css")
+		
    
-	body.container 
+	body
 		-const heading = ["Make Huge Moves", "Powered by the M1 talent program at "]
 		-const currency = ["USD", "COP"]
 		-const languaje = ["ES", "EN"]
@@ -17,24 +17,25 @@ html(lang="en")
 		-const mainMenu = ["Program", "Tech", "Talent"]	
 		-const linkHuge = "https://www.hugeinc.com/"
 		-const images= [{ name: "Program", image: './assets/program.jpg'},{ name: "Talent", image: './assets/talent.jpg'},{ name: "Tech", image: './assets/tech.jpg'}]
-
-		header.header
-			h1(class="header__title") Make huge moves
-			figure
-				a(class="header__link" href=linkHuge)
-					img(class="header__logo" src='./assets/Huge_logo_obscuro.png' alt="Huge logo")
-			include regionalMenu
-		nav.navbar
-			ul: each option in mainMenu
-				li: a(class="navbar__items" href= option)= option
-			
-		main.main
-			article.banner(role="banner")
-				figure: each option in images
-					img(src=option.image alt="")
-					figcaption=  option.name
-		include form		 
-		footer.footer 
-			p(class="footer__title")= heading[1]
-				a(href=linkHuge)
-					span Huge
+		.flex-container
+			header.header
+				h1(class="header__title") Make huge moves
+				figure.header__figure-container
+					a(class="header__link" href=linkHuge)
+						img(class="header__logo" src='./assets/Huge_logo_obscuro.png' alt="Huge logo")
+				include regionalMenu
+			nav.navbar
+				ul: each option in mainMenu
+					li: a(class="navbar__items" href= option)= option
+				
+			main.main
+				article.banner(role="banner"): each option in images
+						figure
+							img(class="banner_img" src=option.image alt="")
+							figcaption=  option.name
+				section.form
+					include form		 
+			footer.footer 
+				p(class="footer__title")= heading[1]
+					a(href=linkHuge)
+						span Huge
