@@ -26,7 +26,7 @@ html(lang="en")
 				include regionalMenu
 			nav.navbar
 				ul: each option in mainMenu
-					li: a(class="navbar__items" href= option)= option
+					li: a(href= option)= option
 				
 			main.main
 				article.banner(role="banner"): each option in images

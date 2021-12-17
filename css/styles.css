@@ -42,16 +42,20 @@
 }
 .navbar{
     background-color: moccasin;
-
+    height: 6em;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
 }
-ul{
+.navbar ul{
     list-style-type: none;
 	margin: 0;
 	padding: 0;
     text-align: center;
-}
-.navbar li{
-    height: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;  
 }
 a{
 	color: inherit;
@@ -85,6 +89,16 @@ a{
         height: 15px;
         margin: 5px; 
     }
+    .navbar{
+        background-color: rgb(181, 255, 249);
+        height: 3em;
+    }
+    .navbar ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
     .main{
         display:flex;
         flex: 50%;
@@ -92,6 +106,8 @@ a{
     .form{
         flex:50%;
     }
+    
+    
 }
 @media only screen and (min-width: 1024px ){
     .header{
