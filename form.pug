@@ -1,15 +1,19 @@
+h4(class="form__title") Contact us
 form.contact-form
 	.contact-form__items 
-		label(id="username") Names 
-		input(type="text" name="username" placeholder="enter your name")
+		label(class="contact-form__label" id="username") Names 
+		input(class="contact-form__input" type="text" name="username" placeholder="enter your name")
 	.contact-form__items 
-		label(id="lastname") LastName
-		input(type="text" name="lastname" placeholder="enter your lastname")
+		label(class="contact-form__label" id="lastname") LastName
+		input(class="contact-form__input" type="text" name="lastname" placeholder="enter your lastname")
 	.contact-form__items 
-		label(id="email") Email
-		input(type="email" name="email" placeholder="enter your email")
-	.contact-form__items  
-		label(id="message") Message
-		textarea(name="message" cols="20" rows="4") 
-	.contact-form__submit
-		button(type="submit" value="Submit") Submit
+		label(class="contact-form__label" id="email") Email
+		input(class="contact-form__input" type="email" name="email" placeholder="enter your email")
+	.contact-form__items 
+		label(class="contact-form__label" id="phone") Phone number
+		input(class="contact-form__input" type="number" name="phone" placeholder="enter your phone")
+	.contact-form__items.contact-form__item--textarea
+		label(class="contact-form__label" id="message") Message
+		textarea(class="contact-form__textarea" name="message" cols="20" rows="4") 
+	.contact-form__button.contact-form__item--button
+		button(class="contact-form__submit" type="submit" value="Submit") Submit
