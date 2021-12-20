@@ -10,6 +10,7 @@
     text-align: center;
     background-color: rgb(12, 11, 10);
     color: #fff;
+    font-size: 1em
 }
 .flex-container > * {
     flex: 100%;
@@ -20,19 +21,20 @@
     display: flex;
     flex-direction: column;
 }
-.header__figure-container{
+.header__logo{
     margin: 0;
     order: 2;
 }
-.header__logo{
+.header__logo-img{
     border-radius: 50%;
     border: 1px solid turquoise;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
 }
 .header__title{
     order: 3;
     margin: 0;
+    font-size: 3em;
     padding: 3px;
     align-self: center
 }
@@ -49,7 +51,7 @@
     flex-flow: column;
     align-items: center;
 }
-.navbar ul{
+.navbar__menu{
     list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -59,9 +61,19 @@
     justify-content: space-around;
     flex-direction: column;  
 }
-.navbar a{
+.navbar__menu-option a{
 	color: inherit;
 	text-decoration: none;
+    font-size: 1.5em;
+}
+.navbar__menu-option--visited:visited{
+    color:greenyellow;
+}
+.navbar__menu-option--hover:hover{
+    color:rgb(71, 205, 223);
+}
+.navbar__menu-option--active:active{
+    color:rgb(233, 77, 186);
 }
 .content{
     color: #fff;
@@ -74,19 +86,19 @@
     flex-flow: column wrap;
     align-items: center;
 }
-.banner_img{
+.banner__img{
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0px 20px 0px 20px;
 }
 
-.banner_img img{
+.banner__img img{
     width: 100%;
     border-radius: 20px;
     
 }
-.banner_img figcaption{
+.banner__img-title{
     color: #FFD;
     font-size: 2em;
     position: relative;
@@ -110,7 +122,7 @@
     width: 80%;
     height: 50vh;
     margin: 0px;
-    font-size: 20px;
+    font-size: 1.5em;
     padding: 1em;
     padding-left: 2em;
     border-radius: 20px;
@@ -139,6 +151,7 @@
 .contact-form__submit{
     background: turquoise;
     width: 50%;
+    font-size: 1em;
     text-transform: uppercase;
     border: none;
     padding: 1em;
@@ -155,9 +168,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 2em;
 }
 .footer__link{
     color: #fff;
+    text-decoration: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -180,8 +195,6 @@
         flex-flow: row;
         align-items: center;
     }
-    
-    
 }
 @media only screen and (min-width: 1024px ){
     .header{
@@ -189,10 +202,10 @@
         flex-direction: row;
         justify-content: space-between;
     }
-    .header__figure-container{
+    .header__logo{
         order: 1;
         position: relative;
-        left: 10em;
+        left: 3em;
         top: 30px;
         padding-top: 20px;
     }
