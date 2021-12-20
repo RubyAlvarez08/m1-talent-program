@@ -67,7 +67,7 @@
     font-size: 1.5em;
 }
 .navbar__menu-option--visited:visited{
-    color:greenyellow;
+    color:rgb(224, 255, 47);
 }
 .navbar__menu-option--hover:hover{
     color:rgb(71, 205, 223);
