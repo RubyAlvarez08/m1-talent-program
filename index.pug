@@ -6,8 +6,10 @@ html(lang="en")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(name="description" content="Exercise jr talent program pug and accessibility")
 		title Jr-Talent-Program
+		link(rel="stylesheet" href="./css/styles.css")
+		
    
-	body 
+	body.flex-container
 		-const heading = ["Make Huge Moves", "Powered by the M1 talent program at "]
 		-const currency = ["USD", "COP"]
 		-const languaje = ["ES", "EN"]
@@ -15,24 +17,25 @@ html(lang="en")
 		-const mainMenu = ["Program", "Tech", "Talent"]	
 		-const linkHuge = "https://www.hugeinc.com/"
 		-const images= [{ name: "Program", image: './assets/program.jpg'},{ name: "Talent", image: './assets/talent.jpg'},{ name: "Tech", image: './assets/tech.jpg'}]
-
-		header.topbar
-			h1= heading[0]
-			.main-menu
-				figure
-					a(class="main-menu__link" href=linkHuge) 
-						img( class="main-menu__logo" src='./assets/Huge_logo_1.jpeg' alt="Huge logo. The link will take you to the official website of the company.")
-					nav
-						ul: each option in mainMenu
-							li: a(href= option)= option
+		
+		header.header
+			h1(class="header__title") Make huge moves
+			figure.header__logo
+				a(class="header__link" href=linkHuge)
+					img(class="header__logo-img" src='./assets/Huge_logo_obscuro.png' alt="Huge logo")
 			include regionalMenu
-		main
-			article.banner(role="banner")
-				figure: each option in images
+		nav.navbar
+			ul(class="navbar__menu"): each option in mainMenu
+				li(class="navbar__menu-option"): a(class= "navbar__menu-option--visited navbar__menu-option--hover navbar__menu-option--active" href= option)= option
+				
+		main.content
+			article.banner(role="banner"): each option in images
+				figure(class="banner__img")
 					img(src=option.image alt="")
-					figcaption=  option.name
-			include form		 
+					figcaption(class="banner__img-title")=  option.name
+			section.form
+				include form		 
 		footer.footer 
-			h2= heading[1]
-				a(href=linkHuge)
-					strong Huge
+			h4(class="footer__title")= heading[1]
+				a(class="footer__link" href=linkHuge)
+					span Huge
