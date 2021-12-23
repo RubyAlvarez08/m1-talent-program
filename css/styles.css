@@ -5,7 +5,6 @@
     padding: 0;
     margin: 0;
     min-height: 100vh;
-    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -208,8 +207,7 @@
         order: 1;
         position: relative;
         left: 3em;
-        top: 30px;
-        padding-top: 20px;
+        top: 20px;
     }
     .header__title{
         order: 2;
