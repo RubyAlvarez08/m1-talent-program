@@ -4,6 +4,8 @@
 .flex-container{
     padding: 0;
     margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -28,13 +30,13 @@
 .header__logo-img{
     border-radius: 50%;
     border: 1px solid turquoise;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: auto;
 }
 .header__title{
     order: 3;
     margin: 0;
-    font-size: 3em;
+    font-size: 2em;
     padding: 3px;
     align-self: center
 }
@@ -45,7 +47,8 @@
     order: 1;
 }
 .navbar{
-    height: 10vh;
+    height: 20vh;
+    padding: 10px;
     display: flex;
     justify-content: center;
     flex-flow: column;
@@ -108,23 +111,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 10px;
-    padding-top: 10px;
-
-    align-items: center;
 }
 .form__title{
     height: 5vh;
-    font-size: 30px;
+    font-size: 1.5em;
     padding: 2px;
+    margin: 0;
 }
 .contact-form {
     width: 80%;
     height: 50vh;
     margin: 0px;
-    font-size: 1.5em;
-    padding: 1em;
-    padding-left: 2em;
+    padding-left: 20px;
     border-radius: 20px;
     box-shadow: 0 0 20px 0 rgb(255 255 255 / 60%);
     display: grid;
@@ -133,7 +131,8 @@
 }
 .contact-form__items{
     text-align: start;
-    width: 30vw;
+    display: flex;
+    flex-direction: column;
 }
 .contact-form__input,
 .contact-form__textarea
@@ -154,7 +153,7 @@
     font-size: 1em;
     text-transform: uppercase;
     border: none;
-    padding: 1em;
+    padding: 10px;
 }
 .contact-form__item--textarea{
     width: 70vw;
@@ -168,7 +167,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
+    font-size: 1em;
 }
 .footer__link{
     color: #fff;
@@ -194,6 +193,9 @@
     .banner{
         flex-flow: row;
         align-items: center;
+    }
+    .footer{
+        font-size: 2em;
     }
 }
 @media only screen and (min-width: 1024px ){
