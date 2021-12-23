@@ -107,6 +107,7 @@
     bottom: 70px;
 }
 .form{
+    height: 80vh;;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,7 +120,7 @@
 }
 .contact-form {
     width: 80%;
-    height: 50vh;
+    height: 70vh;
     margin: 0px;
     padding-left: 20px;
     border-radius: 20px;
@@ -239,6 +240,17 @@
         display: flex;
         flex-direction: column;
         padding-top: 0;
+    }
+    .contact-form {
+        width: 80%;
+        height: 50vh;
+        margin: 0px;
+        padding-left: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px 0 rgb(255 255 255 / 60%);
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
     }
     .contact-form__items {
         width: 70%;
